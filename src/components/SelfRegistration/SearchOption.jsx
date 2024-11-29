@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 // import { Placeholder } from "react-bootstrap";
 import { FaSyncAlt } from "react-icons/fa"; // Importing the refresh icon from react-icons
+import { IoMdRefresh } from "react-icons/io";
 
 const SearchOption = () => {
   const [fromDate, setFromDate] = useState("");
@@ -336,23 +337,20 @@ const SearchOption = () => {
       options: ["select", "New", "Existing"],
     },
   ];
-                                                                                                                                                                                                  
+
   return (
     <section>
       <div className="container-fluid">
         {/* Header */}
         <div className="breadcrumb-header ms-1 me-1 mt-4">
-          <h2 className="fs-4 " style={{ color: "#4959A6" }}>
+          <h2 className="fs-4 " style={{ color: "#5E5873" }}>
             Self Registration
           </h2>
         </div>
         {/* Search Form */}
         <div className="card border-0 rounded shadow-lg ms-1 me-1">
           <div className="card-body">
-            <div className="row g-3 align-items-center">
-              <h5 className="fs-4 " style={{ color: "#4959A6" }}>
-                Search Option
-              </h5>
+            <div className="row g-3 align-items-center"> 
               {inputFields.map((field, index) => (
                 <div className="col-md-2" key={index}>
                   <label className="form-label">{field.label}</label>
@@ -385,7 +383,7 @@ const SearchOption = () => {
               <div className="col-12 ">
                 <button
                   className="btn "
-                  style={{ backgroundColor: "#0A5353", color: "white" }}
+                  style={{ backgroundColor: "#0AD8B5", color: "white" }}
                   type="button"
                   onClick={handleSearch}
                 >
@@ -393,11 +391,11 @@ const SearchOption = () => {
                 </button>
                 <button
                   className="btn ms-2"
-                  style={{ backgroundColor: "red", color: "white" }}
+                  style={{ backgroundColor: "#BB2D3B", color: "white" }}
                   type="button"
                   onClick={handleRefresh}
                 >
-                  <FaSyncAlt /> {/* Refresh Icon */}
+                  <IoMdRefresh size={16} /> {/* Refresh Icon */}
                 </button>
               </div>
             </div>
@@ -409,7 +407,7 @@ const SearchOption = () => {
             Self Registration List
           </h4>
           <div className="table-responsive">
-            <table className="table table-info table-striped text-center table-hover">
+            <table className="table table-info table-striped text-start table-hover">
               <thead>
                 <tr>
                   <th>S.No</th>
@@ -429,15 +427,15 @@ const SearchOption = () => {
                 {currentRows.length > 0 ? (
                   currentRows.map((row, index) => (
                     <tr key={row.Sno}>
-                      <td>{indexOfFirstRow + index + 1}</td>
-                      <td>{row.registrationDate}</td>
+                      <td className="p-3">{indexOfFirstRow + index + 1}</td>
+                      <td className="text-center">{row.registrationDate}</td>
                       <td>{row.trNo}</td>
                       <td>{row.patientName}</td>
                       <td>{row.age}</td>
                       <td>{row.gender}</td>
                       <td>{row.mobileNo}</td>
                       <td>
-                        <a href="#" className="text-decoration-none">
+                        <a href="#" className="text-decoration-none" style={{color:'#7A73EF'}}>
                           {row.document}
                         </a>
                       </td>

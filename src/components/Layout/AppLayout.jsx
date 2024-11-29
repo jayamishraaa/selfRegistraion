@@ -202,6 +202,15 @@ const AppLayout = () => {
                 <FaUserClock className="me-3" /> Duty Rosters
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink
+                to="/self-registration"
+                className="nav-link text-white d-flex align-items-center"
+                onClick={closeOffcanvas}
+              >
+                <FaUserClock className="me-3" /> Self Registration
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>
