@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import { Placeholder } from "react-bootstrap";
 import { FaSyncAlt } from "react-icons/fa"; // Importing the refresh icon from react-icons
 import { IoMdRefresh } from "react-icons/io";
+import { tableData } from "./constant";
 
 const SearchOption = () => {
   const [fromDate, setFromDate] = useState("");
@@ -11,153 +12,6 @@ const SearchOption = () => {
   const [mobileNumber, setMobileNumber] = useState("");
   const [registrationType, setRegistrationType] = useState(""); // Registration Type as select
 
-  const tableData = [
-    {
-      Sno: 1,
-      registrationDate: "26-11-2024",
-      trNo: "TR75688",
-      patientName: "AGRIMA ACHARYA",
-      age: 11,
-      gender: "Female",
-      mobileNo: "9008417784",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359488",
-    },
-    {
-      Sno: 2,
-      registrationDate: "25-11-2024",
-      trNo: "TR75687",
-      patientName: "GOPAL AGRAWAL",
-      age: 66,
-      gender: "Male",
-      mobileNo: "9412482257",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359487",
-    },
-    {
-      Sno: 3,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 4,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 5,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 6,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 7,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 8,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 9,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 10,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 11,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    {
-      Sno: 12,
-      registrationDate: "25-11-2024",
-      trNo: "TR75684",
-      patientName: "JYOTISH SINHA",
-      age: 65,
-      gender: "Male",
-      mobileNo: "9830559695",
-      document: "Sno Proof Document",
-      converted: "Converted",
-      crNo: "359486",
-    },
-    // Add more entries here as needed
-  ];
   const [filteredData, setFilteredData] = useState(tableData);
 
   // Pagination state
@@ -350,7 +204,7 @@ const SearchOption = () => {
         {/* Search Form */}
         <div className="card border-0 rounded shadow-lg ms-1 me-1">
           <div className="card-body">
-            <div className="row g-3 align-items-center"> 
+            <div className="row g-3 align-items-center">
               {inputFields.map((field, index) => (
                 <div className="col-md-2" key={index}>
                   <label className="form-label">{field.label}</label>
@@ -435,7 +289,11 @@ const SearchOption = () => {
                       <td>{row.gender}</td>
                       <td>{row.mobileNo}</td>
                       <td>
-                        <a href="#" className="text-decoration-none" style={{color:'#7A73EF'}}>
+                        <a
+                          href="#"
+                          className="text-decoration-none"
+                          style={{ color: "#7A73EF" }}
+                        >
                           {row.document}
                         </a>
                       </td>
@@ -463,23 +321,62 @@ const SearchOption = () => {
               </tbody>
             </table>
           </div>
+
           {/* Pagination */}
-          <div className="d-flex justify-content-center mt-3">
+          <div className="d-flex justify-content-center mt-3 mb-2">
             <button
-              className="btn  me-2"
-              style={{ backgroundColor: "#0AD8B5", color: "white" }}
+              style={{ border: "none" }}
+              className="btn me-2"
+              // style={{ backgroundColor: "#0AD8B5", color: "white" }}
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+            >
+              &laquo;&laquo;
+            </button>
+            <button
+              style={{ border: "none" }}
+              className="btn me-2"
+              // style={{ backgroundColor: "#0AD8B5", color: "white" }}
               onClick={handlePreviousPage}
               disabled={currentPage === 1}
             >
-              Previous
+              &lsaquo;
             </button>
+
+            {Array.from({ length: totalPages }, (_, index) => (
+              <button
+                key={index + 1}
+                className={`btn me-2 ${
+                  currentPage === index + 1 ? "btn-primary" : ""
+                }`}
+                style={{
+                  border: "none",
+                  backgroundColor: currentPage === index + 1 ? "" : "white",
+                  color: currentPage === index + 1 ? "white" : "black",
+                }}
+                onClick={() => setCurrentPage(index + 1)}
+              >
+                {index + 1}
+              </button>
+            ))}
+
             <button
-              className="btn "
-              style={{ backgroundColor: "#0AD8B5", color: "white" }}
+              style={{ border: "none" }}
+              className="btn me-2"
+              // style={{ backgroundColor: "#0AD8B5", color: "white" }}
               onClick={handleNextPage}
               disabled={currentPage === totalPages}
             >
-              Next
+              &rsaquo;
+            </button>
+            <button
+              style={{ border: "none" }}
+              className="btn"
+              // style={{ backgroundColor: "#0AD8B5", color: "white" }}
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={currentPage === totalPages}
+            >
+              &raquo;&raquo;
             </button>
           </div>
         </div>

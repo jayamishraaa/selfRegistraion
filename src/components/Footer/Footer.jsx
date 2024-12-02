@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className="container-fluid">
       <div className="footer ms-2">
-        <span className="footer-span float-md-start d-block d-md-inline-block text-center mt-3 mb-1">
+        <span className="footer-span float-md-start d-block d-md-inline-block text-center mt-3 ">
           COPYRIGHT © 2024
           <a
             href="https://www.rgcirc.org/"

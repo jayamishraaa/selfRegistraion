@@ -204,7 +204,7 @@ const AppLayout = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/self-registration"
+                to="/selfregistration"
                 className="nav-link text-white d-flex align-items-center"
                 onClick={closeOffcanvas}
               >
