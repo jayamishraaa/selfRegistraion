@@ -1,3 +1,10 @@
 .selfRestration {
   padding-left: 0 !important;
 }
+.list-patient-row.even-row {
+  background-color: #cbf6ff;
+}
+
+.list-patient-row.odd-row {
+background-color: #c5e8ee;
+}

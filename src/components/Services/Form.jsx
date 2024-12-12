@@ -39,10 +39,13 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-light rounded m-3 gy-3 p-4">
+    <div>
+    <div className="breadcrumb-header mb-3 ms-1 me-1 gap-1 mt-4 justify-content-start align-items-center d-flex">
+      <h2 className="fs-4 mx-3">Service</h2>
+    </div>
+    <div className="bg-white py-3 shadow-lg rounded mx-3 gy-3 py-2">
       <div className="container-fluid">
         <div className="">
-          <h5 className="mb-3">Service </h5>
           <div className="row gx-2 gy-3">
             {/* Location */}
             <div className="col-md">
@@ -107,7 +110,7 @@ const Form = () => {
                 name="GroupshortName"
                 value={formData.GroupshortName}
                 onChange={handleChange}
-                placeholder="short Name"
+                placeholder="Short Name"
               />
             </div>
             {/* Description */}
@@ -159,6 +162,7 @@ const Form = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

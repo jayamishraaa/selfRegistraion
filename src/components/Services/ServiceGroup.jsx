@@ -35,7 +35,7 @@ const ServiceGroup = () => {
     }));
   };
   return (
-    <div className="bg-light rounded m-3 p-4 gy-3 ">
+    <div className="bg-white mt-5  rounded m-3 p-4 gy-3 ">
       <h5 className="mb-3">Service Group </h5>
       <div className="container-fluid">
         <div className="row gx-2 gy-3">

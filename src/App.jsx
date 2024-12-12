@@ -6,6 +6,7 @@ import PageNotFound from "./components/HOME/Home";
 import "./custom.css";
 import Form from "./components/Services/Form";
 import ServiceGroup from "./components/Services/ServiceGroup";
+import Location from "./components/Services/Location";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const App = () => {
         {
           path: "/services-group",
           element: <ServiceGroup/>,
+        },
+        {
+          path: "/services-location",
+          element: <Location />,
         },
       ],
     },

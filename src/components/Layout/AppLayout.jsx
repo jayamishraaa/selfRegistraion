@@ -135,11 +135,11 @@ const AppLayout = () => {
 
             <li className="nav-item">
               <NavLink
-                to="/services"
+                to="/services-location"
                 className="nav-link text-white d-flex align-items-center"
               >
                 <MdDesignServices AppRegistration className="icon" />
-                {sidebarOpen && <span className="ms-2">Services</span>}
+                {sidebarOpen && <span className="ms-2">Services Location</span>}
               </NavLink>
             </li>
             <li className="nav-item">
@@ -235,11 +235,11 @@ const AppLayout = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/services"
+                to="/services-location"
                 className="nav-link text-white d-flex align-items-center"
                 onClick={closeOffcanvas}
               >
-                <MdDesignServices className="me-3" /> Services
+                <MdDesignServices className="me-3" /> Services Location
               </NavLink>
             </li>
             <li className="nav-item">
