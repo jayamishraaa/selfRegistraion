@@ -35,8 +35,11 @@ const ServiceGroup = () => {
     }));
   };
   return (
-    <div className="bg-white mt-5  rounded m-3 p-4 gy-3 ">
-      <h5 className="mb-3">Service Group </h5>
+    <div>
+    <div className="breadcrumb-header mb-3 mx-3 gap-1 mt-4 justify-content-start align-items-center d-flex">
+      <h2 className="fs-4">Service Group</h2>
+    </div>
+    <div className="bg-white shadow-lg mt-2 rounded m-3 py-3 gy-3 ">
       <div className="container-fluid">
         <div className="row gx-2 gy-3">
           <div className="col-md">
@@ -398,6 +401,7 @@ const ServiceGroup = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

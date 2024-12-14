@@ -7,6 +7,8 @@ import "./custom.css";
 import Form from "./components/Services/Form";
 import ServiceGroup from "./components/Services/ServiceGroup";
 import Location from "./components/Services/Location";
+import Designation from "./components/Designation/Designation";
+import DesignationForm from "./components/Designation/DesignationForm";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -23,7 +25,7 @@ const App = () => {
           element: <SearchOption />,
         },
         {
-          path: "/services",
+          path: "/service-add",
           element: <Form />,
         },
         {
@@ -31,8 +33,16 @@ const App = () => {
           element: <ServiceGroup/>,
         },
         {
-          path: "/services-location",
+          path: "/service",
           element: <Location />,
+        },
+        {
+          path: "/designation",
+          element: <Designation />,
+        },
+        {
+          path: "/designation-add",
+          element: <DesignationForm />,
         },
       ],
     },

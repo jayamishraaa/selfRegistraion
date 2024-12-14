@@ -135,11 +135,11 @@ const AppLayout = () => {
 
             <li className="nav-item">
               <NavLink
-                to="/services-location"
+                to="/service"
                 className="nav-link text-white d-flex align-items-center"
               >
                 <MdDesignServices AppRegistration className="icon" />
-                {sidebarOpen && <span className="ms-2">Services Location</span>}
+                {sidebarOpen && <span className="ms-2">Service</span>}
               </NavLink>
             </li>
             <li className="nav-item">
@@ -149,6 +149,15 @@ const AppLayout = () => {
               >
                 <GrServices AppRegistration className="icon" />
                 {sidebarOpen && <span className="ms-2">Services Group</span>}
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/designation"
+                className="nav-link text-white d-flex align-items-center"
+              >
+                <GrServices AppRegistration className="icon" />
+                {sidebarOpen && <span className="ms-2">Designation</span>}
               </NavLink>
             </li>
           </ul>
@@ -235,11 +244,11 @@ const AppLayout = () => {
             </li>
             <li className="nav-item">
               <NavLink
-                to="/services-location"
+                to="/service"
                 className="nav-link text-white d-flex align-items-center"
                 onClick={closeOffcanvas}
               >
-                <MdDesignServices className="me-3" /> Services Location
+                <MdDesignServices className="me-3" /> Service
               </NavLink>
             </li>
             <li className="nav-item">
@@ -249,6 +258,15 @@ const AppLayout = () => {
                 onClick={closeOffcanvas}
               >
                 <GrServices className="me-3" /> Services Group
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink
+                to="/designation"
+                className="nav-link text-white d-flex align-items-center"
+                onClick={closeOffcanvas}
+              >
+                <GrServices className="me-3" /> Designation
               </NavLink>
             </li>
           </ul>
